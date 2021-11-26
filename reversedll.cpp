@@ -29,7 +29,21 @@ Node* insertatEnd(Node* head,int x){
         return curr;
     }
 
+Node* reversedll(Node *head){
 
+    while(head->next!=NULL){
+        Node* temp = head->previous;
+        head->previous = head->next;
+        head->next = temp;
+        head = head->previous;
+    }
+        Node* temp = head->previous;
+        head->previous = head->next;
+        head->next = temp;
+    
+        return head;
+
+}
 
 void printList(Node* head){
     while(head!=NULL){
@@ -44,7 +58,7 @@ int main(){
        head = insertatEnd(head,10);
        head = insertatEnd(head,20);
        head = insertatEnd(head,30);
-      
+       head = reversedll(head);
        printList(head);
 
     
