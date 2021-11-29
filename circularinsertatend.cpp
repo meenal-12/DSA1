@@ -33,6 +33,13 @@ void traversal(Node* head){
      
 }
 
+Node* deleteFirst(Node* tail){
+       
+       Node* temp = tail->next;
+       tail->next = tail->next->next;
+       delete temp;
+       return tail->next;
+}
 int main(){
     Node* head = NULL;
   
@@ -40,6 +47,7 @@ int main(){
     tail = insertAtEnd(&head,tail,10);
     tail = insertAtEnd(&head,tail,20);
     tail = insertAtEnd(&head,tail,30);
+    head = deleteFirst(tail);
     traversal(head);
     
 }
