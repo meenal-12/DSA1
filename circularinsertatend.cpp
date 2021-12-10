@@ -33,13 +33,7 @@ void traversal(Node* head){
      
 }
 
-// Node* deleteFirst(Node* tail){
-       
-//        Node* temp = tail->next;
-//        tail->next = tail->next->next;
-//        delete temp;
-//        return tail->next;
-// }
+
 int main(){
     Node* head = NULL;
   

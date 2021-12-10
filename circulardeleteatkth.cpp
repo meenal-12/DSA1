@@ -27,9 +27,7 @@ Node* insertAtBegin(Node* head,int data){
     return curr;
  }
 
-Node* deleteKthelement(Node* head,){
 
-}
 void traversal(Node* head){
        
        Node* temp = head;
@@ -46,7 +44,7 @@ int main(){
     head = insertAtBegin(head,10);
     head = insertAtBegin(head,20);
     head = insertAtBegin(head,30);
-
+    head = deleteKthelement(head,2);
     traversal(head);
 
     return 0;
